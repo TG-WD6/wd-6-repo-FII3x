@@ -1,0 +1,35 @@
+3 manieren om css te laden
+<tag style="diplay:block"> => inline in html hoogste prioriteit, onleesbaar
+<style> css </style>       => inline in .html snellere styling onoverzichtelijk
+<link rel="stylesheet" ref="..." => extern best georganiseerd
+
+vraag 3
+
+                    selector
+input {}            type
+.big {}             class
+#first {}           id
+form h3 {}          descendant (direct)
+* {}                all
+[name="test"] {}    attribute
+form > label {}     child
+form + footer       adjected
+form ~ div          general sibling
+
+pseudo elements
+::first line:   first line of text
+::first letter: first letter of text
+:: before, after absolute divs 
+    before the content of element
+    or after the content of the element
+::marker decoration in li ul
+::selection selction by user
+::backdrop: happens when fullscreen
+::cue for WebVTT affects all in a single track
+::file-selector-button get the fileselector button
+::grammar-error represents a text segment which the user agent has flagged as grammatically incorrect
+::part() represents any element with a shadow tree
+::placeholder represents the placeholder text in an document
+::slotted() represents any element slotted in a html template
+::spelling error represents a text segment which the user agent has flagged as incorrectly spelled.
+::target-text epresents the text that has been scrolled to if the browser supports scroll-to-text fragments.

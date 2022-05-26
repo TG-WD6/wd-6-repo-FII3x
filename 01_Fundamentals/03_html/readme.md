@@ -289,13 +289,12 @@ Resulteert in:
 
 # HTML Exercises
 
-
-
 1. Bouw de HTML voor een navigatiebalk. Verwerk onderstaande voorbeeld erin. 
 
 ![alt_text](images/image8.png)
 
-1. Creëer nu voor elk onderdeel een header en een bijbehorende stuk tekst en zorg ervoor dat door te klikken op de links in de navigatiebalk je gerefereerd wordt naar het bijbehorende onderdeel. Zie hieronder een voorbeeld: 
+1. Creëer nu voor elk onderdeel een header en een bijbehorende stuk tekst en zorg ervoor dat door te klikken op de links in de navigatiebalk je gerefereerd wordt naar het bijbehorende onderdeel. Zie 
+ een voorbeeld: 
 
 ![alt_text](images/image9.gif)
 

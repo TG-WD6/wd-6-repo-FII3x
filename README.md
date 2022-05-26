@@ -5,7 +5,6 @@ Deze repository zal al je werk gedurende de opleiding bevatten. De inhoud is aan
 
 Een groot deel van de web development opdrachten zijn praktijkopdrachten, maar een aantal is ook theorie. De theorie-opdrachten mag je samen of apart in een .md bestand opslaan. Voor de praktijkopdrachten dien je bij elke opdracht een aparte file te gebruiken!
 
-
 ## Organisation is Key
 
 Een goede structuur van je project zorgt ervoor dat andere mensen er gemakkelijker en sneller mee kunnen werken. Dit betekent dat je niet teveel files in 1 folder wil gooien, en dat je files/folders duidelijke namen en rollen moeten hebben.
