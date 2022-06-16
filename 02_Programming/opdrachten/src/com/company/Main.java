@@ -5,34 +5,49 @@ import com.company.Zoo.Animal;
 import com.company.Zoo.Cat;
 import com.company.Zoo.Reptile;
 import com.company.Zoo.Zoo;
-import com.company.blackjack.Game;
 
+import java.util.Random;
+import java.util.Scanner;
 import java.util.Stack;
+import java.util.function.Consumer;
 
 public class Main {
 
     public static void main(String[] args) {
-        Game.singlePlayer();
+        Sentence.CAH();
     }
 
-    private static void Sort() {
-        int[] array = {2, 7, 5, 10, 4, 9, 3, 1, 8, 6};
+    private static long measure(int input, Consumer<Integer> action) {
+        var time = System.nanoTime();
+        action.accept(input);
+        return System.nanoTime() - time;
+    }
+
+    private static int[] arrayOf(int size) {
+        var r = new int[size];
+        var random = new Random();
+        for (var x = 0; x < size; x++) {
+            r[x] = random.nextInt(0, size);
+        }
+        return r;
+    }
+
+    private static void Sort(int size) {
+        int[] array = arrayOf(size);
         var changed = true;
+        var alen = array.length - 1;
 
         while (changed) {
             changed = false;
-            for (int i = 0; i < array.length - 1; i++) {
+            for (int i = 0; i < alen; i++) {
                 var f = array[i];
                 var s = array[i + 1];
                 if (f > s) {
                     array[i + 1] = f;
                     array[i] = s;
                     changed = true;
-                }
+                } else if (i == alen - 1) alen -= 1;
             }
-        }
-        for (var x : array){
-            System.out.println(x);
         }
     }
 
@@ -52,10 +67,10 @@ public class Main {
         var bigBear = new Bear(Bear.Type.Black);
     }
 
-    class TArray {
+    static class Hanoi {
         Stack<Integer> receiver;
         Stack<Integer> spare;
-        Stack<Integer> target;
+        Stack<Integer> origin;
 
         private Stack<Integer> newStack(int len) {
             var r = new Stack<Integer>();
@@ -63,16 +78,32 @@ public class Main {
                 r.push(i);
             return r;
         }
-        public TArray(int a, int b, int c) {
+
+        public Hanoi(int a) {
             receiver = newStack(a);
-            spare = newStack(b);
-            target = newStack(c);
+            spare = new Stack();
+            origin = new Stack();
+        }
+
+        public void solve(boolean print) {
+            solve(origin.size(), print);
+        }
+
+        private void solve(int disk, boolean print) {
+
+            if (origin.size() == 1) {
+                receiver.push(origin.pop());
+            } else {
+                solve(disk-1, print);
+                solve(disk, print);
+                solve(disk -1, print);
+            }
         }
     }
 
-    private void Extra() {
-        var arr = new TArray(3,4,2);
-
+    private static void extra() {
+        var arr = new Hanoi(3);
+        arr.solve(false);
     }
 }
 
