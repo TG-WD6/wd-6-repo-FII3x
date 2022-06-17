@@ -1,0 +1,82 @@
+.login {
+    margin: auto;
+    padding: 30px;
+    width: 280px;
+
+    span {
+        text-align: center;
+    }
+
+    & * {
+        margin: auto;
+        display: block;
+        width: 100%;
+    }
+
+    &span {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    &>img {
+        display: block;
+        margin: auto;
+        width: 100%;
+        border-radius: 7px;
+        padding: 4px;
+    }
+
+    &>*>input.text {
+        text-decoration: none;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid black;
+        padding: 7px;
+        font-size: 1.2em;
+    }
+
+    .row {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 7px;
+
+        a {
+            color: blue;
+            text-decoration: none;
+            font-size: 0.9em;
+            overflow: hidden;
+        }
+
+        input {
+            color: red;
+            width: 50px;
+        }
+    }
+
+    .button {
+        padding: 7px;
+        margin-top: 15px;
+        border-radius: 0;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and #{$tablet} {
+    .login {
+        width: 380px;
+
+        .row {
+            flex-direction: row;
+
+            a {
+                margin-left: auto;
+            }
+        }
+    }
+}
