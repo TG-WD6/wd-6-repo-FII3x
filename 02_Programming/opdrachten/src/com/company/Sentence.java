@@ -47,13 +47,6 @@ public class Sentence extends ISentence {
                 new Sentence("did you know jens has _?"),
                 new Sentence("_ gives me uncontrollable gas."),
                 new Sentence("_ is a slippery slope that leads to _."),
-                new Sentence("""
-                        In the distant
-                        future, historians
-                        will agree that
-                        _ marked the
-                        beginning of
-                        America's decline."""),
                 new Sentence("only two things in life are certain death and _."),
                 new Sentence("_ + _ = _"),
         };
