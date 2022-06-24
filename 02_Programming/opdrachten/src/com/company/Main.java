@@ -7,14 +7,12 @@ import com.company.Zoo.Reptile;
 import com.company.Zoo.Zoo;
 
 import java.util.Random;
-import java.util.Scanner;
-import java.util.Stack;
 import java.util.function.Consumer;
 
 public class Main {
 
     public static void main(String[] args) {
-        Sentence.CAH();
+        Hanoi.Run();
     }
 
     private static long measure(int input, Consumer<Integer> action) {
@@ -65,45 +63,6 @@ public class Main {
     private static void ForrestAnimals() {
         var careBear = new Bear(Bear.Type.Grizzly);
         var bigBear = new Bear(Bear.Type.Black);
-    }
-
-    static class Hanoi {
-        Stack<Integer> receiver;
-        Stack<Integer> spare;
-        Stack<Integer> origin;
-
-        private Stack<Integer> newStack(int len) {
-            var r = new Stack<Integer>();
-            for (var i = 0; i <= len; i++)
-                r.push(i);
-            return r;
-        }
-
-        public Hanoi(int a) {
-            receiver = newStack(a);
-            spare = new Stack();
-            origin = new Stack();
-        }
-
-        public void solve(boolean print) {
-            solve(origin.size(), print);
-        }
-
-        private void solve(int disk, boolean print) {
-
-            if (origin.size() == 1) {
-                receiver.push(origin.pop());
-            } else {
-                solve(disk-1, print);
-                solve(disk, print);
-                solve(disk -1, print);
-            }
-        }
-    }
-
-    private static void extra() {
-        var arr = new Hanoi(3);
-        arr.solve(false);
     }
 }
 
