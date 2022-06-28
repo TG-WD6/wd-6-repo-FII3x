@@ -2,10 +2,12 @@ package com.company;
 
 import com.company.Exception.Quiz.Quiz;
 import com.company.Forrest.Bear;
+import com.company.Functional.person;
 import com.company.Zoo.Animal;
 import com.company.Zoo.Cat;
 import com.company.Zoo.Reptile;
 import com.company.Zoo.Zoo;
+import com.company.annotations.Weekday;
 
 import java.util.Random;
 import java.util.function.Consumer;
@@ -13,7 +15,7 @@ import java.util.function.Consumer;
 public class Main {
 
     public static void main(String[] args) {
-        Quiz.Play();
+        Weekday.run();
     }
 
     private static long measure(int input, Consumer<Integer> action) {
