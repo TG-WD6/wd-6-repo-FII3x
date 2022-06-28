@@ -22,6 +22,7 @@ public class Sentence extends ISentence {
             if (x != 0) System.out.println("input " + (x+1));
             words[x] = scanner.nextLine();
         }
+        scanner.close();
         return with(words);
     }
 

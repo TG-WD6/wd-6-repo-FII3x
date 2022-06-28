@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.Exception.Quiz.Quiz;
 import com.company.Forrest.Bear;
 import com.company.Zoo.Animal;
 import com.company.Zoo.Cat;
@@ -12,7 +13,7 @@ import java.util.function.Consumer;
 public class Main {
 
     public static void main(String[] args) {
-        Hanoi.Run();
+        Quiz.Play();
     }
 
     private static long measure(int input, Consumer<Integer> action) {
