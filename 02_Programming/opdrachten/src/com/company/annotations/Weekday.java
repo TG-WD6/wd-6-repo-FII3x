@@ -22,6 +22,8 @@ public enum Weekday {
     }
 
     @Buggy(priority = Priority.HIGH, severity = Severity.ZERODAY) // definitely!!
+
+
     public static void run() {
         for (var x : Weekday.values())
             System.out.println(x);

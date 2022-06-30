@@ -3,6 +3,7 @@ package com.company;
 import com.company.Exception.Quiz.Quiz;
 import com.company.Forrest.Bear;
 import com.company.Functional.person;
+import com.company.Palidrome.Palindrome;
 import com.company.Zoo.Animal;
 import com.company.Zoo.Cat;
 import com.company.Zoo.Reptile;
@@ -15,7 +16,7 @@ import java.util.function.Consumer;
 public class Main {
 
     public static void main(String[] args) {
-        Weekday.run();
+        Palindrome.run();
     }
 
     private static long measure(int input, Consumer<Integer> action) {
