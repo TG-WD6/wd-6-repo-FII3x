@@ -268,9 +268,9 @@ Daarvoor bestaat er nog een laatste manier om met Exceptions om te gaan - **_try
 
 Je hebt in de voorbeelden gezien dat een try block meerdere catch blocks kan hebben. 
 
-1. Wat is de volgorde waarin deze blocks uitgevoerd worden?
-2. Kan een enkele exception verschillende catch blocks laten uitvoeren?
-3. Maak onderstaande code na en leg uit wat er mis aan is:
+1. Wat is de volgorde waarin deze blocks uitgevoerd worden? -> try, catch, finally
+2. Kan een enkele exception verschillende catch blocks laten uitvoeren? -> nee dat word gematch
+3. Maak onderstaande code na en leg uit wat er mis aan is: de eerste catch pakt alle exceptions
 
 ![img](images/image6.png)
 
