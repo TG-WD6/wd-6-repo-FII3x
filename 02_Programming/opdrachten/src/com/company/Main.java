@@ -1,22 +1,24 @@
 package com.company;
 
-import com.company.Exception.Quiz.Quiz;
+import com.company.airport.AirportProgram;
 import com.company.Forrest.Bear;
-import com.company.Functional.person;
-import com.company.Palidrome.Palindrome;
 import com.company.Zoo.Animal;
 import com.company.Zoo.Cat;
 import com.company.Zoo.Reptile;
 import com.company.Zoo.Zoo;
-import com.company.annotations.Weekday;
 
+import java.io.IOException;
 import java.util.Random;
 import java.util.function.Consumer;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Palindrome.run();
+    public static void main(String[] args) throws IOException {
+        try {
+            AirportProgram.test();
+        } catch (Exception e) {
+            System.out.println();
+        }
     }
 
     private static long measure(int input, Consumer<Integer> action) {
