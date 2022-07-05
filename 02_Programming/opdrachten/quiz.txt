@@ -1,0 +1,6 @@
+game played with 2 players
+Alex, Jeans
+question:what year was the first iphone released-> answers: [ 2005,2006,2007,+2008]
+Alex had 0:false,Jeans had 1:false
+question:what is 1 + 1?-> answers: [ +1,2,3,4]
+Alex had 0:true,Jeans had 1:false

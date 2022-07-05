@@ -1,0 +1,39 @@
+Collections and Generics
+
+voordeel linked list: als je veel wijzingen aan de array maakt
+voordel arrayList: als je data op wilt slaan een opzoeken
+
+voordeel van hashset: constante tijd voor search, insert, delete
+- dit neemt O(Log n)
+voordeel van treeset: sorteerd data in volgorde dus er zijn methodes als higher floor of ceiling.
+
+E -> parameter type Element in Collection api
+K -> Key in hashmap
+V -> value in hashmap
+N -> represents a Number
+T -> represents a type
+S, U, V -> 2,3,4 generic parameters
+R? return type
+
+Type erasure:
+genereert een classe on de fly voor de gebruikte generics.
+
+opdrachten functional java
+
+opdracht 1: snap ik niet
+
+oprdracht 2:
+als je een loc(line of code) geen haakjes en geen return
+anders wel haakjes en return;
+
+oprdracht 3:
+map geeft een nieuwe lijst met de transformatie die je hebt gemaakt
+
+opdracht 4:
+collector voert de queries uit en plaats het in een list,Array,ArrayList
+
+Enums
+
+opdracht 2:
+je zou enumeraties kunnen gebruiken voor de sporten dan kun je meta data gebruiken voor de namen niet.
+enum values zijn altijd final
