@@ -5,6 +5,7 @@ import com.company.airport.csv.Parser;
 
 import java.io.FileReader;
 import java.io.IOException;
+
 import com.company.airport.entity.*;
 
 import java.util.Arrays;
@@ -14,15 +15,19 @@ import java.util.stream.Stream;
 
 public class AirportProgram {
     public static void test() throws IOException {
-        System.out.println("no arguments");
-        run(new String[] {});
-        System.out.println("Search for na (this is automatically capitalized)");
-        run(new String[] {"na"});
-        System.out.println("Search for brazil (becomes Brazil automatically)");
-        run(new String[] {"brazil"});
-        System.out.println("search for mex (search is case insensitiveve)");
-        run(new String[] {"mex"});
+        System.out.println("--No arguments");
+        run(new String[]{});
+
+        System.out.println("--Search for na (this is automatically capitalized)");
+        run(new String[]{"na"});
+
+        System.out.println("--Search for brazil (becomes Brazil automatically)");
+        run(new String[]{"brazil"});
+
+        System.out.println("--Search for mex (search is case insensitive)");
+        run(new String[]{"mex"});
     }
+
 
     public static void run(String[] args) throws IOException {
         var airportId = new HashMap<String, Airport>();
@@ -58,12 +63,15 @@ public class AirportProgram {
         if (args.length == 1) {
             var name = args[0];
             Country country = null;
-            var gcode = CountryCode(name);
-            var gname = CountryName(name);
-            if (countryCode.containsKey(gcode)) {
-                country = countryCode.get(gcode);
-            } else if (countryName.containsKey(gname)) {
-                country = countryName.get(gname);
+
+            var ccode = name.toUpperCase();
+            var cname = Character.toUpperCase(name.charAt(0))
+                    + name.substring(1).toLowerCase();
+
+            if (countryCode.containsKey(ccode)) {
+                country = countryCode.get(ccode);
+            } else if (countryName.containsKey(cname)) {
+                country = countryName.get(cname);
             } else {
                 var match = 0;
                 for (var x : countries) {
@@ -75,7 +83,7 @@ public class AirportProgram {
                 }
             }
             if (country == null) {
-                System.out.println("no such country found");
+                System.out.println("no such country found!");
             }
             System.out.println(country.name + " -> " + country.airports.size());
         } else {
@@ -84,7 +92,7 @@ public class AirportProgram {
                     .sorted(Comparator.comparingInt(a -> a.airports.size()))
                     .toList();
             for (var x = 0; x < 10; x++) {
-                var item = sorted.get(sorted.size()-1-x);
+                var item = sorted.get(sorted.size() - 1 - x);
                 System.out.println(item.name + " -> " + item.airports.size());
             }
         }
@@ -93,6 +101,7 @@ public class AirportProgram {
 
     //@jens mischien moet je hier de / naar \\ veranderen voor windows
     public static String base = "/Users/alexander/github-classroom/TG-WD6/wd-6-repo-FII3x/02_Programming/opdrachten/src/com/company/airport/";
+
     public static Stream<CSVRow> Parse(String ext) throws IOException {
         return Arrays.stream(Parser.Parse(new FileReader(base + ext)));
     }
@@ -103,15 +112,6 @@ public class AirportProgram {
             if (Character.toLowerCase(a.charAt(x)) != Character.toLowerCase(b.charAt(x)))
                 return x;
         }
-        return len-1;
-    }
-
-    public static String CountryCode(String s) {
-        return s.toUpperCase();
-    }
-
-    public static String CountryName(String s) {
-        return Character.toUpperCase(s.charAt(0))
-               + s.substring(1).toLowerCase();
+        return len;
     }
 }

@@ -18,7 +18,6 @@ public class Parser {
         return rows.toArray(CSVRow[]::new);
     }
 
-
     private final char quote = '"';
     private final char seperator = ',';
 
